@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment From</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='paymentFrom.css') }}"> -->
+    <link rel="stylesheet" href="../static/paymentFrom.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/success" method="post">
+            <h1 class="mainHeading">Payment From</h1>
+            <hr>
+            <h2>User Informtion</h2>
+            <p>Name:
+                <input type="text" required name="name" placeholder="Rahul Dey" >
+            </p>
+            <p>
+                <fieldset>
+                    <legend>Gender</legend>
+                    Male: <input type="radio" name="gender" id="male" value="M" required> Female: <input type="radio" name="gender" id="female" value="F" required>
+                </fieldset>
+            </p>
+            <p>Address:
+                <textarea placeholder="Enter your Address" name="address" id="address" cols="100" rows="13" required></textarea>
+            </p>
+            <p> Email:
+                <input type="email" placeholder="abc@gmail.com" name="email" id="email" required>
+            </p>
+            <p>Pincode:
+                <input type="number" placeholder="1234567" name="pincode" id="pincode" required>
+            </p>
+            <hr>
+            <h2>Payment Informtion</h2>
+            <p>Card Type:
+                <select name="card" id="card" required>
+                    <option value="">---select a Card Type---</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="Rupay">Rupay</option> 
+                </select>
+            </p>
+            <p>Card Number:
+                <input type="number" placeholder="1111-2222-3333-4444" name="cardNumber" id="cardNumber" required>
+            </p>
+            <p>Expiry Date:
+                <input type="date" placeholder="dd/mm/yyyy" name="expiryDate" id="expiryDate" required> 
+            </p>
+            <p>CVV:
+                <input type="password" placeholder="***" name="cvv" id="cvv" required>
+            </p>
+            <input type="submit" value="Pay Now" id="submit">
+        </form>
+    </div>
+</body>
+</html>

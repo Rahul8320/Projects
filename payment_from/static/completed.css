@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    font-family: "Sofia", sans-serif;
+    margin: 15px 30px;
+    font-size: 20px;
+    padding: 8px;
+}
+
+.container{
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    margin: auto;
+}
+
+h1{
+	color: blue;
+	font-size: 40px;
+}
+
+p{
+	color: green;
+}
