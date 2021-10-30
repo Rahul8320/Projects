@@ -1,0 +1,57 @@
+body{
+    box-sizing: border-box;
+}
+
+#main-heading{
+    font-size:75px;
+    color:crimson;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+#sub-heading{
+    padding-bottom: 10px;
+}
+
+.header{
+    margin: 30px auto;
+    width: 90%;
+    height: 10%;
+    background-color: cornsilk;
+    color:brown;
+    font-size: 22px;
+    text-align: center;
+}
+
+#task{
+    width: 100%;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+input[type="text"]{
+    width: 60%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
+    border: 2px ridge royalblue;
+}
+
+.tasklist{
+    width: 100%;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 3px hotpink;
+}
+
+input:checked + label {
+    color: rgb(167, 56, 56);
+    text-decoration: line-through;
+}

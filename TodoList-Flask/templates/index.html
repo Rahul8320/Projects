@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="header">
+       <div id="main-heading">
+            | TodoList |
+       </div>  
+       <div id="sub-heading">
+           | List your task here |
+        </div>
+    </div>
+    <div id="task">
+        <form action="/create" method="POST">
+            <input type="text" class="todo-list" name="todolist" autocomplete="off" placeholder="Add Task..">        
+        </form>
+    </div>
+
+    <div class="tasklist">
+        {% for item in data %}
+        <form action="/check" method="POST">
+            <input type="checkbox" name="{{ item.taskId }}" id="{{ item.taskId }}" onchange="submit()">
+            <label for="{{ item.taskId }}"> {{ item.taskName }} </label>
+        </form>
+        {% endfor %}
+    </div>
+    
+    <!-- Todo:
+        2. list all todo from databse and add checkboxes before that.
+    -->
+
+
+</body>
+</html>
