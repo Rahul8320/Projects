@@ -2,6 +2,6 @@
     "params":
     {
         "local_server":"True",
-        "local_uri": "mysql+mysqlconnector://root:khepa8320@localhost/sys"
+        "local_uri": "mysql+mysqlconnector://root:@localhost/"
     }
 }
