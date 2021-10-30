@@ -9,7 +9,7 @@ with open('config.json', 'r') as c:
 
 app = Flask(__name__)
 
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@8320@localhost/TodoList'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:@localhost/TodoList'
 app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
 
 db = SQLAlchemy(app)
