@@ -373,7 +373,7 @@ class Student_Management_System:
             messagebox.showerror("Error", "All Fields are Mandatory!", parent=self.root)
         else:
             try:
-                conn = mysql.connector.connect(host="localhost", user="root", password="root@8320", database="facial_reg_sys")
+                conn = mysql.connector.connect(host="localhost", user="root", password="", database="facial_reg_sys")
                 my_cursor = conn.cursor()
                 my_cursor.execute("insert into student values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", (
                                                                                                                             self.var_dep.get(),
@@ -406,7 +406,7 @@ class Student_Management_System:
 
     # -----------Fetch data from Database ---------------
     def fetch_data(self):
-        conn = mysql.connector.connect(host="localhost", user="root", password="root@8320", database="facial_reg_sys")
+        conn = mysql.connector.connect(host="localhost", user="root", password="", database="facial_reg_sys")
         my_cursor = conn.cursor()
         my_cursor.execute("select * from student")
         data = my_cursor.fetchall()
@@ -452,7 +452,7 @@ class Student_Management_System:
             try:
                 ans = messagebox.askyesno("Update Field", "Do you want to update data?", parent=self.root)
                 if ans > 0:
-                    conn = mysql.connector.connect(host="localhost", user="root", password="root@8320", database="facial_reg_sys")
+                    conn = mysql.connector.connect(host="localhost", user="root", password="", database="facial_reg_sys")
                     my_cursor = conn.cursor()
                     my_cursor.execute("update student set Dep=%s, course=%s, year=%s, sem=%s, student_name=%s, reg=%s, roll=%s, gender=%s, dob=%s, email=%s, phone=%s, address=%s, pin=%s, teacher_id=%s, teacher_name=%s, project_name=%s, project_code=%s, photo=%s WHERE student_id=%s", (
                                                                                                                                                                                                                                                                     self.var_dep.get(),
@@ -494,7 +494,7 @@ class Student_Management_System:
             try:
                 ans = messagebox.askyesno("Delete", "Do you want to delete data?", parent=self.root)
                 if ans > 0:
-                    conn = mysql.connector.connect(host="localhost", user="root", password="root@8320", database="facial_reg_sys")
+                    conn = mysql.connector.connect(host="localhost", user="root", password="", database="facial_reg_sys")
                     my_cursor = conn.cursor()
                     sql = "DELETE FROM student WHERE student_id = %s"
                     val = (self.var_std_id.get(),)
@@ -537,7 +537,7 @@ class Student_Management_System:
             messagebox.showerror("Error", "All Fields are Mandatory!", parent=self.root)
         else:
             try:
-                conn = mysql.connector.connect(host="localhost", user="root", password="root@8320", database="facial_reg_sys")
+                conn = mysql.connector.connect(host="localhost", user="root", password="", database="facial_reg_sys")
                 my_cursor = conn.cursor()
                 # my_cursor.execute("SELECT * FROM student")
                 # result = my_cursor.fetchall()
