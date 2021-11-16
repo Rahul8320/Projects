@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Utils</title>
+</head>
+<body>
+    <h1 style="text-align: center;">
+        Welcome to the text analyzer. Enter your text here.
+    </h1>
+    <form action="/analyzer" method="get">
+        <textarea style="margin: 1%; width: 95%; height: 150px;" name="textarea" id="textarea"></textarea>
+        <input type="checkbox" name="removepunc" id="removepunc"> Remove Punctuation <br>
+        <input type="checkbox" name="fullcaps" id="fullcaps"> UPPER CASE <br>
+        <input type="checkbox" name="removenewline" id="removenewline"> Remove New Lines <br>
+        <input type="checkbox" name="removextraspace" id="removextraspace"> Remove Extra Spaces <br>
+        <input type="checkbox" name="charcount" id="charcount"> Count Characters <br>
+        
+        <br>
+        <button type="submit"> Submit</button>
+    </form>
+
+    <br>
+    <button type="button" onclick="window.location.href='http://127.0.0.1:8000/about';"> About </button>
+</body>
+</html>
